@@ -1,0 +1,20 @@
+<div id="page-content">
+  <div id="tabs-container">
+    <nav> 
+      <ul class="tabs">
+        <li *ngFor="let item of inputData;" (click)="showContent(item)" class="tab" [ngClass]="{'active': item.order == selectedTabContent.order}">
+          {{item?.headerText}}
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="tab-content">
+
+    <div *ngFor="let row of multiArray" class="tab-row-content">
+      <div *ngFor="let col of row" class="tab-row-col-content">
+        <div [innerHTML]="col"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
