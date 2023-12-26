@@ -1,0 +1,36 @@
+.tabs{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    column-gap: 5px;
+    width: 100vw;
+    background: aliceblue;
+}
+
+.tabs .tab{
+    flex-grow: 1;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.tabs .tab.active{
+    color: white;
+    background: cornflowerblue;
+    cursor: none;
+}
+
+.tab-row-content{
+    display: flex;
+}
+
+.tab-row-col-content{
+    flex-basis: calc(33.3% - 12px);
+    border: 1px solid darkorchid;
+    margin: 5px;
+}
+
+.tab-row-content > div:nth-child(2n){
+    background: #ccc;
+    margin: 5px;
+}
